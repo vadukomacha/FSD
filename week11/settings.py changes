@@ -1,0 +1,6 @@
+settings .py changes
+
+import os -14th line
+
+
+'DIRS': [os.path.join(BASE_DIR,'templates')],-58 line
