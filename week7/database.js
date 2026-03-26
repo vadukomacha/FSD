@@ -1,0 +1,25 @@
+const { MongoClient } = require('mongodb');
+const url = 'mongodb://127.0.0.1:27017'
+const client = new MongoClient(url);
+let collection;
+async function connectDB(dbname, table) {
+    let result = await client.connect();
+    let db = result.db(dbname);
+    collection = db.collection(table);
+    console.log("Database Connected...");
+    return collection;
+}
+exports.getData = async function(name, password) {
+    collection = await connectDB("cse2f", "employee");
+    let response = await collection.find({ name: name, password: password }).toArray();
+    console.log("From getdata method:" + JSON.stringify(response));
+    collection.close;
+    return JSON.stringify(response);
+}
+exports.insertData = async function(emp) {
+    collection = await connectDB("cse2f", "employee");
+    let response = await collection.insertOne({ name: emp.name, work: emp.work, password: emp.password })
+    console.log("Record inserted successfully");
+    collection.close;
+    return JSON.stringify(response);
+}

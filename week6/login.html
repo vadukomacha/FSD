@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#loginform").submit(()=>{
+                event.preventDefault();
+                var name=$("#username").val();
+                var password=$("#pwd").val();
+                //generate token by making a service call to /auth with post
+                $.ajax({
+                    url:"/auth",
+                    type:"POST",
+                    contentType:"application/json",
+                    dataType:"json",
+                    data:JSON.stringify({
+                        name:name,
+                        password:password
+                    }),
+                    success:function(data){
+                        var tokenData=data;
+                        if(tokenData.login==true){
+                            localStorage.setItem("username",tokenData.data.name);
+                            localStorage.setItem("job",tokenData.data.work);
+                            if(verifyLogin(tokenData.token)){
+                                alert("JWT TOKEN:"+tokenData.token);
+                                window.location.href="/welcome";
+                            }
+                            else{
+                                alert("Authentication Failed");
+                            }
+                        }
+                    },
+                    error:function(data){
+                        console.log("something went wrong");
+                    }
+                });
+
+            });
+        });
+        function verifyLogin(token){
+            let result=true;
+            //verifyToken by making a service call to /verifyToken with post
+            $.ajax({
+                url:"/verifyToken",
+                type:"POST",
+                contentType:"application/json",
+                dataType:"json",
+                data:JSON.stringify({
+                    token:token
+                }),
+                success:function(data){
+                    if(data.login==true){
+                        result=true;
+                    }
+                    else{
+                        result=false;
+                    }
+                },
+                error:function(data){
+                    console.log("wrong token ,Not Authenticated");
+                }
+            });
+
+            return result;
+        }
+
+    </script>
+
+</head>
+<body>
+    <center>
+        <form id="loginform">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="pwd" name="pwd"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </center>    
+</body>
+</html>

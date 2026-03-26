@@ -1,0 +1,26 @@
+welcome.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+</head>
+<script>
+    function LogoutValidate(){
+        localStorage.clear();
+    }
+    function getdetails(){
+        var fname=localStorage.getItem("firstname");
+        var mail=localStorage.getItem("email");
+        document.getElementById("data").innerHTML="welcome to "+fname+"<br>"+mail
+    }
+</script>
+<body onload="getdetails()">
+    <h1 id="data">Welcome to Cmrit</h1>
+    <form action="/"method="post">
+        <button type="submit" onclick="LogoutValidate()">Logout</button>
+    </form>
+</body>
+</html>

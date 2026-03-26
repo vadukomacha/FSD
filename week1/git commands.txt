@@ -1,0 +1,31 @@
+>git init
+>git config --global user.email"mail-id"
+>git config --global user.name"username"
+>notepad one.txt
+>notepad sample.html
+>git status
+>git add one.txt
+>git status
+>git add sample.html
+>git status
+>git remote add origin https://github.com/username/foldername.git
+>git push -u origin master
+>git branch
+>git branch fb2
+>git branch
+>git checkout fb2
+>git branch
+>notepad demo.html
+>git checkout master
+>git checkout fb2
+>git status
+>git add "demo.html"
+>git commit -m "demo file is added"
+>git push -u origin fb2
+>git branch
+>git checkout master
+>git merge fb2
+>git push -u origin master
+>git branch -d fb2
+>git branch
+>git push origin --delete fb2
