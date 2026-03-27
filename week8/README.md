@@ -15,7 +15,7 @@ ng new foldername
 ```bash
 ng g c header
 ng generate component home
-bg g c profile
+ng g c profile
 ```
 
 4.Run :
