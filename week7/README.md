@@ -15,7 +15,7 @@ You mentioned you will provide MongoDB details later.
 2. Install packages (if needed):
 
 ```bash
-npm install express jsonwebtoken mongodb
+npm install node express path fs jsonwebtoken mongodb
 ```
 
 3. Run server:
