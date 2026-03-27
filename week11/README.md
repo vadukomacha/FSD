@@ -25,7 +25,7 @@ py -m django --version
 ```
 7.
 ```bash
-django -admin startproject csef
+django-admin startproject csef
 ```
 8.
 ```bash
