@@ -1,44 +1,32 @@
-# Week 8 - Angular (SPA)
-
-## Tech Stack
-- Angular (Standalone Components)
-- TypeScript
-- Angular Router
-
 ## How This Project Was Created
-This project was created using Angular CLI.
-
-Creation command pattern used:
-
+Create a folder and open in cmd:
+1.
 ```bash
-npx @angular/cli new spa --directory . --standalone --routing --style=css
+npm install -g @angular/cli
+```
+2. 
+```bash
+ng new foldername
+```
+->select y
+->select css
+
+3.Create header,profile,home:
+```bash
+ng g c header
+ng generate component home
+bg g c profile
 ```
 
-Then custom app files were wired inside src/app and old duplicate root files were removed.
-
-## Install
-1. Open terminal in this folder
-2. Run:
-
+4.Run :
 ```bash
-npm install
+ng serve --o
 ```
+->select y
 
-## Run
-1. Start development server:
-
-```bash
-npm start
-```
-
-2. Open the URL shown in terminal (usually):
-- http://localhost:4200/
-
-## Build
 
 ```bash
 npm run build
 ```
 
-## Notes
-- This is an Angular SPA using routes for Home and Profile.
+
