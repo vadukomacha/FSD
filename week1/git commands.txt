@@ -8,8 +8,8 @@
 >git status
 >git add sample.html
 >git status
->git remote add origin https://github.com/username/foldername.git
 >git commit -m "2 files are added"
+>git remote add origin https://github.com/username/foldername.git
 >git push -u origin master
 >git branch
 >git branch fb2
