@@ -25,8 +25,5 @@ ng serve --o
 ->select y
 
 
-```bash
-npm run build
-```
 
 
