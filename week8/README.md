@@ -1,59 +1,44 @@
-# Spa
+# Week 8 - Angular (SPA)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.21.
+## Tech Stack
+- Angular (Standalone Components)
+- TypeScript
+- Angular Router
 
-## Development server
+## How This Project Was Created
+This project was created using Angular CLI.
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Creation command pattern used:
 
 ```bash
-ng generate component component-name
+npx @angular/cli new spa --directory . --standalone --routing --style=css
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Then custom app files were wired inside src/app and old duplicate root files were removed.
+
+## Install
+1. Open terminal in this folder
+2. Run:
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+## Run
+1. Start development server:
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. Open the URL shown in terminal (usually):
+- http://localhost:4200/
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Build
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Notes
+- This is an Angular SPA using routes for Home and Profile.
