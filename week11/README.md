@@ -1,6 +1,6 @@
 ## How This Project Was Created
 1. Open terminal in this folder
-   ```bash
+```bash
 python --version
 ```
 2.
