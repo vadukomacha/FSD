@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7cca9f83-20e7-4063-84dc-6874123e66f9" />
+
 ## Install
 1. Open terminal in this folder
 ```bash
