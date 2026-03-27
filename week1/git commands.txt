@@ -19,7 +19,7 @@
 >git checkout master
 >git checkout fb2
 >git status
->git add "demo.html"
+>git add demo.html
 >git commit -m "demo file is added"
 >git push -u origin fb2
 >git branch
