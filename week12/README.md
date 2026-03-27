@@ -1,55 +1,46 @@
-# Week 12 - Django + Django REST Framework
-
-## Tech Stack
-- Python
-- Django
-- Django REST Framework (DRF)
-- SQLite
-- HTML templates + Bootstrap + jQuery
-
-## How This Project Was Created
-This week is a Django API + template project.
-
-Creation style (project pattern):
-- Django project: restapi
-- Django apps: api, base
-- DRF used for API endpoints
-
-The app provides pages and API routes for user data operations.
-
-## Project Structure
-- manage.py: Django entry point
-- restapi/: project settings and root URLs
-- api/: page views + API endpoints
-- base/: data model
-- templates/: HTML templates
-- db.sqlite3: database
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7cca9f83-20e7-4063-84dc-6874123e66f9" />
 ## Install
 1. Open terminal in this folder
-2. Install required packages:
-
+```bash
+python -m venv venv
+```
+2.
+```bash
+.\venv\scripts\activate
+```
+3.
 ```bash
 pip install django djangorestframework
 ```
-
-## Run
-1. Make sure DB schema is applied:
-
+4.
+```bash
+django-admin startproject restapi
+```
+5.
+```bash
+cd restapi
+```
+6.
+```bash
+django-admin startapp api
+```
+7.
+```bash
+django-admin startapp base
+```
+8.
+```bash
+code .
+```
+9.Run:
 ```bash
 python manage.py makemigrations
+```
+10.
+```bash
 python manage.py migrate
 ```
-
-2. Start server:
-
+11.
 ```bash
 python manage.py runserver
 ```
-
-3. Open:
-- http://127.0.0.1:8000/
-
-## Notes
-- DRF is required because rest_framework is in INSTALLED_APPS.
-- If Python command differs, use py manage.py ...
