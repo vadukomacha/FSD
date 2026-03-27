@@ -126,6 +126,6 @@ app.post("/login",(req,res)=>{
 app.post("/signup",(req,res)=>{
     res.redirect("/signup")
 });
-app.listen(port,()=>{
-    console.log("Server is running:http://localhost:${port}/");
+app.listen(8000,()=>{
+    console.log("Server is running:http://localhost:${8000}/");
 });
