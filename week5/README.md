@@ -24,7 +24,9 @@ Main idea:
 2. Run:
 
 ```bash
-npm install
+node -v
+npm install node
+npm install express
 ```
 
 ## Run
