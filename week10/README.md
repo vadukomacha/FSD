@@ -7,45 +7,25 @@
 - React Bootstrap + Bootstrap
 
 ## How This Project Was Created
-This project was created using Vite React template.
+Create a folder and open cmd.
 
-Creation command pattern used:
-
+1.
 ```bash
-npm create vite@latest . -- --template react
+npm install -g npx
 ```
-
-Then routing/layout components were added in src/templates and old duplicate root files were removed.
-
-## Install
-1. Open terminal in this folder
-2. Run:
-
+2.
 ```bash
-npm install
+npm install -g create-react-app
 ```
-
-## Run
-1. Start development server:
-
+3.
 ```bash
-npm run dev
+npx create-react-app spa1
 ```
-
-2. Open the URL shown in terminal (usually):
-- http://localhost:5173/
-
-## Build
-
+4.
 ```bash
-npm run build
+cd spa1
 ```
-
-## Preview Production Build
-
+5.Run:
 ```bash
-npm run preview
+npm start
 ```
-
-## Notes
-- This is a React SPA with routes for Home, Profile, and Contact.
