@@ -1,52 +1,37 @@
-# Week 11 - Django (Template Rendering + Routing)
-
-## Tech Stack
-- Python
-- Django
-- HTML templates
-- Bootstrap (CDN)
-
 ## How This Project Was Created
-This week was structured as a Django project and app.
-
-Creation style:
-- django-admin startproject week11config .
-- python manage.py startapp home
-
-Then app URLs, views, and templates were wired for:
-- Home
-- Dashboard
-- Contact
-
-## Project Structure
-- manage.py: Django entry point
-- week11config/: project settings and root URLs
-- home/: app logic
-- home/templates/: app templates
-
-## Install
 1. Open terminal in this folder
-2. Install Django:
-
+   ```bash
+python --version
+```
+2.
+```bash
+py -m pip install --user virtualenv
+```
+3.
+```bash
+py -m venv venv
+```
+4.
+```bash
+.\venv\scripts\activate
+```
+5.Install Django:
 ```bash
 pip install django
 ```
-
-## Run
-1. Apply migrations:
-
+6.
 ```bash
-python manage.py migrate
+py -m django --version
 ```
-
-2. Start server:
-
+7.
 ```bash
-python manage.py runserver
+django -admin startproject csef
 ```
-
-3. Open:
-- http://127.0.0.1:8000/
-
-## Notes
-- If Python command is different on your machine, use py instead of python.
+8.
+```bash
+cd csef
+```
+9.Run:
+```bash
+py manage.py runserver
+```
