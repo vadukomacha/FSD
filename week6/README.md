@@ -25,13 +25,7 @@ The authentication flow was built with:
 2. Install required packages:
 
 ```bash
-npm install express jsonwebtoken
-```
-
-If you already have a package.json with these dependencies, run:
-
-```bash
-npm install
+npm install node express path fs jsonwebtoken
 ```
 
 ## Run
@@ -42,8 +36,4 @@ node server.js
 ```
 
 2. Open:
-- http://localhost:3600/
-
-## Notes
-- Server port is 3600.
-- Data is file-based (database.json), not a real DB server.
+- http://localhost:8000/
